@@ -45,7 +45,7 @@ function Header() {
           <Link href="/agent" className="text-[16px] font-medium">
             Agents
           </Link>
-          <Link href="/" className="text-[16px] font-medium">
+          <Link href="/about" className="text-[16px] font-medium">
             About Us
           </Link>
         </nav>
