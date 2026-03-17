@@ -15,7 +15,7 @@ export default function Home() {
   return (
      <main className="m-0 p-0 ">
       
-      <section>
+      {/* <section>
       <div className="relative w-full aspect-1440/713">
         <Image
           src="/banner.png"
@@ -77,10 +77,11 @@ export default function Home() {
 
       </div>
 
-      </section> 
-      <ListingPage/>   
+      </section>  */}
+
+      {/* <ListingPage/>   
       <ReviewPage/>
-      <BlogsPage/>
+      <BlogsPage/> */}
 
      <section className="mb-16 mt-60">
        <div className="w-298 h-93 mx-auto bg-[#4954A4] relative p-8">
@@ -136,7 +137,7 @@ export default function Home() {
        </div>
      </section>
 
-     <section className="bg-[#FAFAFA] py-8 px-18">
+     {/* <section className="bg-[#FAFAFA] py-8 px-18">
       <div className=" grid grid-cols-2">
         <div>
         <h1 className={`${ebGaramond.className} font-semibold text-[24px] pr-40`}>
@@ -178,9 +179,9 @@ export default function Home() {
           </p>
         </div>
       </div>
-     </section>
+     </section> */}
 
-     <FaqPage/>
+     {/* <FaqPage/> */}
     
     </main>
   );

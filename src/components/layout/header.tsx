@@ -1,7 +1,5 @@
 "use client";
 
-//import { signOut, useSession } from "@/lib/auth-client";
-import { LogOut, Package } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Button } from "../ui/button";
@@ -35,19 +33,19 @@ function Header() {
 
         {/* Nav - evenly spaced */}
         <nav className="flex-1 flex justify-evenly ml-20">
-          <Link href="/gallery" className="text-[16px] font-medium">
+          <Link href="/" className="text-[16px] font-medium">
             Home
           </Link>
-          <Link href="/gallery" className="text-[16px] font-medium">
+          <Link href="/" className="text-[16px] font-medium">
             Properties
           </Link>
-          <Link href="/gallery" className="text-[16px] font-medium">
+          <Link href="/" className="text-[16px] font-medium">
             Tools
           </Link>
-          <Link href="/gallery" className="text-[16px] font-medium">
+          <Link href="/agent" className="text-[16px] font-medium">
             Agents
           </Link>
-          <Link href="/gallery" className="text-[16px] font-medium">
+          <Link href="/" className="text-[16px] font-medium">
             About Us
           </Link>
         </nav>
