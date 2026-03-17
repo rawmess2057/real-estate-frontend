@@ -25,7 +25,7 @@ export default function Home() {
         />
       </div>
       
-      <div className=" absolute top-40 left-30 w-185">
+      <div className=" absolute top-40 left-28 w-185">
         <div className="">
           <h1 className={`${ebGaramond.className} font-semibold text-[54px] text-white leading-tight tracking-normal md:pr-40`}>
             Find Your Perfect Home in Nepal
@@ -83,7 +83,7 @@ export default function Home() {
       <ReviewPage/>
       <BlogsPage/>
 
-     <section className="mb-16 mt-60">
+     <section className="mb-16 mt-40">
        <div className="w-298 h-93 mx-auto bg-[#4954A4] relative p-8">
          <div className="w-146">
            <h1 className={`${ebGaramond.className} font-medium text-white text-[32px]`}>

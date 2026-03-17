@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b bg-white">
-      <div className=" flex h-20  items-center justify-evenly mx-31.25">
+      <div className=" flex h-20  items-center justify-evenly mx-28">
          {/* Logo */}
         <Link href="/" className="flex items-center">
           <span

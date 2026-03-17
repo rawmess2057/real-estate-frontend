@@ -13,7 +13,7 @@ function AgentPage() {
 
         </div>
 
-        <div className='mx-31.25 mt-10 grid grid-cols-4 gap-10 mb-28'>
+        <div className='mx-28 mt-10 grid grid-cols-4 gap-10 mb-28'>
             <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
