@@ -2,8 +2,6 @@ import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-//import ListingPage from "@/components/listings/page";
-//import ReviewPage from "@/components/reviews/page";
 import { ebGaramond } from "@/lib/fonts";
 import BlogsPage from "@/components/blogs/page";
 import ListingPage from "@/components/listings/page";
@@ -18,17 +16,17 @@ export default function Home() {
      <main className="m-0 p-0 ">
       
       <section>
-      {/* <div className="relative w-full aspect-1440/713">
+      <div className="relative w-full aspect-1440/713">
         <Image
           src="/banner.png"
           alt="Home Banner"
           fill
           className="block w-full h-auto"
         />
-      </div> */}
+      </div>
       
       <div className=" absolute top-40 left-30 w-185">
-        {/* <div className="">
+        <div className="">
           <h1 className={`${ebGaramond.className} font-semibold text-[54px] text-white leading-tight tracking-normal md:pr-40`}>
             Find Your Perfect Home in Nepal
           </h1>
@@ -36,9 +34,9 @@ export default function Home() {
             Discover thousands of properties for sale and rent across Nepal.
             From modern apartments to traditional houses and prime land.
           </p>
-        </div> */}
+        </div>
 
-        {/* <Card className="w-122 mt-10">
+        <Card className="w-122 mt-10">
           
           <CardHeader className="flex items-center justify-between">
             <Button variant="default" className="px-20">Buy</Button>
@@ -60,9 +58,9 @@ export default function Home() {
             <Button variant="outline" className="px-2">Search by location</Button>
             <Button variant="outline" className="px-2">Search</Button>
           </CardFooter>
-        </Card> */}
+        </Card>
 
-        {/* <div className="flex items-center gap-6 mt-12">
+        <div className="flex items-center gap-6 mt-12">
           <div>
             <h1 className="text-white text-[36px] font-semibold leading-none">10K+</h1>
             <p className="text-white text-[18px] font-normal">Properties</p>
@@ -75,14 +73,14 @@ export default function Home() {
             <h1 className="text-white text-[36px] font-semibold leading-none">10K+</h1>
             <p className="text-white text-[18px] font-normal">Districts</p>
           </div>
-        </div> */}
+        </div>
 
       </div>
 
       </section> 
-      {/* <ListingPage/>   
+      <ListingPage/>   
       <ReviewPage/>
-      <BlogsPage/> */}
+      <BlogsPage/>
 
      <section className="mb-16 mt-60">
        <div className="w-298 h-93 mx-auto bg-[#4954A4] relative p-8">
@@ -182,13 +180,8 @@ export default function Home() {
       </div>
      </section>
 
-<<<<<<< Updated upstream
-     {/* <FaqPage/> */}
-     <Footer/>
-=======
      <FaqPage/>
->>>>>>> Stashed changes
-
+    
     </main>
   );
 }
