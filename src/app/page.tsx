@@ -10,7 +10,6 @@ import ListingPage from "@/components/listings/page";
 import { AvatarFallback } from "@/components/ui/avatar";
 import FaqPage from "@/components/questions/page";
 import ReviewPage from "@/components/reviews/page";
-import Footer from "@/components/layout/footer";
 
 
 
@@ -183,8 +182,12 @@ export default function Home() {
       </div>
      </section>
 
+<<<<<<< Updated upstream
      {/* <FaqPage/> */}
      <Footer/>
+=======
+     <FaqPage/>
+>>>>>>> Stashed changes
 
     </main>
   );
