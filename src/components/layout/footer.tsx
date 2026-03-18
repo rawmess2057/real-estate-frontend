@@ -1,14 +1,14 @@
-import { ebGaramond } from '@/lib/fonts'
+import { ebGaramond, poppins } from '@/lib/fonts'
 import React from 'react'
 
 function Footer() {
   return (
     <div className='bg-[#222222]'>
-        <div className='px-18 grid grid-cols-5 gap-8 pt-6'>
+        <div className='px-18 grid grid-cols-5 gap-x-8 pt-6'>
             <div className='col-span-2'>
                 <h1 className={`${ebGaramond.className} font-semibold text-[32px] text-white`}>
                     GharJagga</h1>
-                <p className='text-[#EAEAEA] text-[16px] font-light md:pr-26'>
+                <p className={`${poppins.className} text-[#EAEAEA] text-[16px] font-normal md:pr-26`}>
                     Nepal's trusted platform for buying, selling, and renting 
                     properties. Find your dream home with us.</p>
 
@@ -78,14 +78,14 @@ function Footer() {
                 </div>
             </div>
 
-            <div className='col-span-5 w-full h-px bg-[#EAEAEA]'/>
+            <div className='col-span-5 w-full h-px bg-[#EAEAEA]  mt-6 mb-2'/>
 
-            <div className='flex gap-3 col-span-3'>
-                <p className='text-[#EAEAEA]'>© GharJagga 2026. </p>
+            <div className='flex col-span-3'>
+                <p className='text-[#EAEAEA] mr-4'>© GharJagga 2026. </p>
                 <p className='text-[#EAEAEA]'>All Rights Reserved.</p>
             </div>
-            <div className='col-span-2 flex items-center gap-8 justify-end'>
-                <p className='text-[#EAEAEA]'>Privacy Policy</p>
+            <div className='col-span-2 flex items-cente justify-end'>
+                <p className='text-[#EAEAEA] mx-8'>Privacy Policy</p>
                 <p className='text-[#EAEAEA]'>Terms of Services</p>
             </div>
         </div>

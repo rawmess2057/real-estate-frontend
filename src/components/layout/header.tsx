@@ -53,7 +53,10 @@ function Header() {
         {/* Buttons */}
         <div className="flex items-center gap-6">
           <Button className="px-4 py-2 bg-[#7171FF] text-white">Post Property</Button>
-          <Button className="px-4 py-2 bg-white text-black border-2 border-[#7171FF]">Login/Signup</Button>
+          <Button 
+          onClick={()=> router.push("/login")}
+          className="px-4 py-2 bg-white text-black border-2 border-[#7171FF]">
+            Login/Signup</Button>
         </div>
 
       </div>
