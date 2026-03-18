@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ebGaramond } from "@/lib/fonts";
 import BlogsPage from "@/components/blogs/page";
-import ListingPage from "@/components/listings/page";
+import ListingPage from "@/components/listings/PropertyListing";
 import { AvatarFallback } from "@/components/ui/avatar";
 import FaqPage from "@/components/questions/page";
 import ReviewPage from "@/components/reviews/page";
@@ -137,7 +137,7 @@ export default function Home() {
        </div>
      </section>
 
-     <section className="bg-[#FAFAFA] py-8 px-18">
+     <section id="tools" className="bg-[#FAFAFA] py-8 px-18">
       <div className=" grid grid-cols-2">
         <div>
         <h1 className={`${ebGaramond.className} font-semibold text-[24px] pr-40`}>

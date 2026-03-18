@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 import { Anton } from "next/font/google";
 
@@ -13,7 +13,6 @@ const anton = Anton({
 
 function Header() {
   const pathName = usePathname();
-  const router = useRouter();
   const isLoginPage: boolean = pathName === "/login";
 
 
@@ -36,10 +35,10 @@ function Header() {
           <Link href="/" className="text-[16px] font-medium">
             Home
           </Link>
-          <Link href="/" className="text-[16px] font-medium">
+          <Link href="/properties" className="text-[16px] font-medium">
             Properties
           </Link>
-          <Link href="/" className="text-[16px] font-medium">
+          <Link href="/#tools" className="text-[16px] font-medium">
             Tools
           </Link>
           <Link href="/agent" className="text-[16px] font-medium">
