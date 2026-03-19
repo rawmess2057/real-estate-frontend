@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ebGaramond } from "@/lib/fonts";
 import Link from "next/link";
 
-function LoginPage() {
+function RegisterPage() {
   return (
     <div className="w-full h-screen flex items-center justify-center shadow bg-[#D9D9D9]">
       
@@ -23,10 +23,19 @@ function LoginPage() {
         <div className="w-1/2 flex flex-col justify-center">
           
           <h1 className={`${ebGaramond.className} text-[24px] font-medium text-center`}>
-            Login to your account
+            Create Account
           </h1>
 
           <form className="flex flex-col items-center gap-2">
+            
+            <div>
+              <label className="block text-[#6F6F6F] text-[16px] font-medium">Full Name</label>
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                className=" bg-[#EDEDED] placeholder:text-[#5D5D5D] placeholder:text-[12px] px-8 py-1 rounded-lg"
+              />
+            </div>
 
             <div>
               <label className="block text-[#6F6F6F] text-[16px] font-medium">Email</label>
@@ -38,43 +47,25 @@ function LoginPage() {
             </div>
 
             <div>
-              <div className="flex items-center justify-between">
               <label className="block text-[#6F6F6F] text-[16px] font-medium">Password</label>
-              <p className="text-[12px] font-medium text-[#3939FF]">
-                Forget Password?</p>
-              </div>
               <input
                 type="password"
                 placeholder="Enter your Password"
                 className=" bg-[#EDEDED] placeholder:text-[#5D5D5D] placeholder:text-[12px] px-8 py-1 rounded-lg"
               />
-              
-              <div className="flex items-center gap-2 mt-2">
-                 <input
-                   type="checkbox"
-                   id="remember"
-                   className="w-4 h-4 accent-[#3939FF] rounded"
-                 />
-                 <label
-                   htmlFor="remember"
-                   className="text-[#434343] text-[12px] font-medium select-none"
-                 >
-                   Remember Me
-                 </label>
-              </div>
             </div>
 
-            <Button className="px-8 py-3 my-2 rounded-xl text-[12px] font-normal text-white border bg-[#3939FF]">
-               Login</Button>
+            <Button className="px-12 py-3 my-2 rounded-xl text-[12px] font-normal text-white border bg-[#3939FF]">
+               Create Account</Button>
           </form>
 
           <div className=" flex flex-col items-center justify-center space-y-2">
 
           <div className="flex items-center gap-2 justify-center">
              <p className="text-[#6F6F6F] text-[12px] font-medium">
-               Don't have an account? </p>
-                <Link href={"/register"} className="text-[#3939FF] text-[12px] font-medium">
-                   Sign Up</Link> 
+               Already have an account? </p>
+                <Link href={"/login"} className="text-[#3939FF] text-[12px] font-medium">
+                   Log In</Link> 
           </div>
 
           
@@ -114,4 +105,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default RegisterPage;

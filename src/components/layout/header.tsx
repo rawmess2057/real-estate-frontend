@@ -17,8 +17,6 @@ function Header() {
   const isLoginPage: boolean = pathName === "/login";
 
 
-  if (isLoginPage) return null;
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b bg-white">
       <div className=" flex h-20  items-center justify-evenly mx-28">
@@ -52,7 +50,8 @@ function Header() {
 
         {/* Buttons */}
         <div className="flex items-center gap-6">
-          <Button className="px-4 py-2 bg-[#7171FF] text-white">Post Property</Button>
+          <Button className="px-4 py-2 bg-[#7171FF] text-white"
+          onClick={()=> router.push("/post-property")}>Post Property</Button>
           <Button 
           onClick={()=> router.push("/login")}
           className="px-4 py-2 bg-white text-black border-2 border-[#7171FF]">
