@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ebGaramond } from "@/lib/fonts";
 import { Button } from "@/components/ui/button";
 import { type PropertyRecord } from "./propertyData";
+import MapClient from "./MapClient";
 
 type PropertyDetailsProps = {
 	property: PropertyRecord;
@@ -17,7 +18,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
 			</div>
 
 			<section className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6 lg:gap-8">
-				<aside className="bg-white border border-[#EAEAEA] rounded-xl p-5 h-fit lg:sticky lg:top-26 order-2 lg:order-1">
+				<aside className="bg-white border border-[#EAEAEA] rounded-xl p-5 h-fit lg:sticky lg:top-26 order-1">
 					<h2 className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-1`}>
 						Enquiry Form
 					</h2>
@@ -50,7 +51,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
 					</form>
 				</aside>
 
-				<div className="order-1 lg:order-2">
+				<div className="order-2">
 					<div className="bg-white border border-[#EAEAEA] rounded-xl overflow-hidden">
 						<img src={property.image} alt={property.title} className="w-full h-[260px] md:h-[360px] object-cover" />
 						<div className="p-5 md:p-6">
@@ -115,15 +116,21 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
 								<h2 className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-3`}>
 									Property Images
 								</h2>
-								<div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-									{property.gallery.map((image, index) => (
-										<img
-											key={`${property.id}-${index}`}
-											src={image}
-											alt={`${property.title} ${index + 1}`}
-											className="w-full h-28 md:h-32 object-cover rounded-md"
-										/>
-									))}
+								<div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+									<div className="rounded-md overflow-hidden">
+										<MapClient address={property.location} className="w-full h-56 md:h-full object-cover" />
+									</div>
+
+									<div className="grid grid-cols-2 gap-3">
+										{property.gallery.map((image, index) => (
+											<img
+												key={`${property.id}-${index}`}
+												src={image}
+												alt={`${property.title} ${index + 1}`}
+												className="w-full h-28 md:h-32 object-cover rounded-md"
+											/>
+										))}
+									</div>
 								</div>
 							</div>
 						</div>
