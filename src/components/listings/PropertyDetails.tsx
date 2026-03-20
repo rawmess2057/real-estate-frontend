@@ -15,7 +15,7 @@ import {
   Ruler,
   Calendar,
   CircleCheck,
-  ChevronLeft 
+  ChevronLeft,
 } from "lucide-react";
 
 type PropertyDetailsProps = {
@@ -24,13 +24,13 @@ type PropertyDetailsProps = {
 
 function PropertyDetails({ property }: PropertyDetailsProps) {
   return (
-    <main className="pt-4 pb-16 px-4 md:px-10 lg:px-16 bg-whte min-h-screen">
+    <main className="pt-4 pb-16 px-4 md:px-10 lg:px-30 bg-whte min-h-screen">
       <div className="mb-6">
         <Link
           href="/properties"
           className="text-sm text-[#7171FF] hover:underline"
         >
-           <ChevronLeft />
+          <ChevronLeft />
         </Link>
       </div>
 
@@ -150,7 +150,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
                     key={item.label}
                     className="flex items-start gap-3 rounded-lg p-3 bg-white"
                   >
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-md  text-[#4754C5]">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-md  text-[#000000]">
                       {item.icon}
                     </span>
                     <div className="flex flex-col">
