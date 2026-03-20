@@ -127,21 +127,3 @@
     @apply font-sans;
   }
 }
-
-/* Filter area: keep color consistency and remove unnecessary hover effects */
-.filters-panel .group\/button:hover,
-.filters-panel .group\/button:active {
-  background-color: transparent !important;
-  color: inherit !important;
-}
-
-/* Dropdown items inside filters - no hover highlight (selected state still shows) */
-.filters-panel .property-dropdown button:hover {
-  background-color: transparent !important;
-  color: inherit !important;
-}
-
-/* Smooth max-height transition fallback for the custom dropdown */
-.property-dropdown {
-  transition: max-height 180ms ease-out, opacity 180ms ease-out;
-}

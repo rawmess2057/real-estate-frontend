@@ -5,7 +5,7 @@ import { Button } from '../ui/button';
 
 function BlogsPage() {
   return (
-    <div className='bg-[#FAFAFA] mt-20 mb-6 pt-12 pb-28'>
+    <div className='bg-[#FAFAFA] mt-10 mb-6 pt-12 pb-28'>
         <h1 className={`${ebGaramond.className} font-medium text-[32px] text-[#434343] flex justify-center mb-8`}>
             Blogs & Articles
         </h1>

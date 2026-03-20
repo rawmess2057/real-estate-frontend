@@ -1,4 +1,4 @@
-import { ebGaramond } from '@/lib/fonts'
+import { ebGaramond, poppins } from '@/lib/fonts'
 import React from 'react'
 
 function AboutPage() {
@@ -19,7 +19,7 @@ function AboutPage() {
 
         <h1 className={`${ebGaramond.className} text-[32px] font-semibold`}>
           About Us</h1>
-        <p className='text-center text-[#434343] leading-normal'>
+        <p className={`${poppins.className} text-[#434343] text-center  leading-normal`}>
           At Gharjagga we believe that finding the right property is more 
           than just a transaction  it’s a life changing experience. Our mission is to help individuals, families, and investors discover spaces where dreams grow and investments thrive.
         </p>
@@ -39,7 +39,7 @@ function AboutPage() {
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>
             Property Listings</h1>
-          <p className='text-[#717171] text-center'>
+          <p className={`${poppins.className} text-[#717171] text-center  leading-normal`}>
             Gharjagga assists property owners in listing their properties for sale or rent
              on various platforms, ensuring maximum exposure to potential buyers or tenants.</p>  
         </div>
@@ -50,7 +50,7 @@ function AboutPage() {
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>
             Property Listings</h1>
-          <p className='text-[#717171] text-center'>
+          <p className={`${poppins.className} text-[#717171] text-center  leading-normal`}>
             Gharjagga assists property owners in listing their properties for sale or rent
              on various platforms, ensuring maximum exposure to potential buyers or tenants.</p>  
         </div>
@@ -61,7 +61,7 @@ function AboutPage() {
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>
             Property Listings</h1>
-          <p className='text-[#717171] text-center'>
+          <p className={`${poppins.className} text-[#717171] text-center  leading-normal`}>
             Gharjagga assists property owners in listing their properties for sale or rent
              on various platforms, ensuring maximum exposure to potential buyers or tenants.</p>  
         </div>
@@ -72,7 +72,7 @@ function AboutPage() {
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>
             Property Listings</h1>
-          <p className='text-[#717171] text-center'>
+          <p className={`${poppins.className} text-[#717171] text-center  leading-normal`}>
             Gharjagga assists property owners in listing their properties for sale or rent
              on various platforms, ensuring maximum exposure to potential buyers or tenants.</p>  
         </div>
