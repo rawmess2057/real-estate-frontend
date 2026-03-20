@@ -1,7 +1,22 @@
+"use client";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import Link from "next/link";
 import { ebGaramond } from "@/lib/fonts";
 import { Button } from "@/components/ui/button";
 import { type PropertyRecord } from "./propertyData";
+import {
+  BedDouble,
+  Bath,
+  Dice4,
+  Compass,
+  Home,
+  Ruler,
+  Calendar,
+  CircleCheck,
+  ChevronLeft 
+} from "lucide-react";
 
 type PropertyDetailsProps = {
   property: PropertyRecord;
@@ -9,13 +24,13 @@ type PropertyDetailsProps = {
 
 function PropertyDetails({ property }: PropertyDetailsProps) {
   return (
-    <main className="pt-4 pb-16 px-4 md:px-10 lg:px-16 bg-[#FAFAFA] min-h-screen">
+    <main className="pt-4 pb-16 px-4 md:px-10 lg:px-16 bg-whte min-h-screen">
       <div className="mb-6">
         <Link
           href="/properties"
           className="text-sm text-[#7171FF] hover:underline"
         >
-          Back to Properties
+           <ChevronLeft />
         </Link>
       </div>
 
@@ -57,57 +72,97 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
           </form>
         </aside>
 
-        <div className="order-2 lg:order-1 lg:col-start-1">
-          <div className="bg-white border border-[#EAEAEA] rounded-xl overflow-hidden">
+        <div className="order-2 lg:order-1  lg:col-start-1">
+          <div className=" overflow-hidden">
             <img
               src={property.image}
               alt={property.title}
-              className="w-full h-[320px] md:h-[420px] lg:h-[500px] object-cover"
+              className="w-full rounded-2xl h-[320px] md:h-[420px] lg:h-[500px] object-cover"
             />
-            <div className="p-5 md:p-6">
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                <span className="text-xs px-3 py-1 rounded-full bg-[#EEF0FF] text-[#4B55BD] font-medium">
-                  {property.purpose}
-                </span>
-                <span className="text-xs px-3 py-1 rounded-full bg-[#F4F4F4] text-[#5E5E5E] font-medium">
-                  {property.propertyType}
-                </span>
-              </div>
-
+            <div className="p-5 border border-[#EAEAEA]  mt-4 rounded-4xl  md:p-6">
               <h1
-                className={`${ebGaramond.className} text-[32px] font-semibold text-[#2E2E2E] leading-tight`}
+                className={`${ebGaramond.className} text-[32px] px-8 font-semibold text-[#2E2E2E] leading-tight`}
               >
                 {property.title}
               </h1>
-              <p className="text-2xl md:text-3xl font-extrabold text-[#2B44D6] mt-2">
-                {property.price}
-              </p>
-
-              <div className="flex items-center gap-2 mt-3">
+              <div className="flex px-8 items-center gap-2 mt-3">
                 <img src="/images/vector3.svg" alt="location" />
                 <p className="text-sm text-[#5D5D5D] font-medium">
                   {property.location}
                 </p>
               </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-5">
-                <div className="rounded-lg border border-[#E5E5E5] p-3">
-                  <p className="text-xs text-[#7A7A7A]">Beds</p>
-                  <p className="font-medium text-[#2E2E2E]">{property.beds}</p>
-                </div>
-                <div className="rounded-lg border border-[#E5E5E5] p-3">
-                  <p className="text-xs text-[#7A7A7A]">Area</p>
-                  <p className="font-medium text-[#2E2E2E]">{property.area}</p>
-                </div>
-                <div className="rounded-lg border border-[#E5E5E5] p-3">
-                  <p className="text-xs text-[#7A7A7A]">Road Access</p>
-                  <p className="font-medium text-[#2E2E2E]">
-                    {property.roadAccess}
-                  </p>
-                </div>
+              <p className="text-2xl px-8 md:text-3xl EB Garamond font-extrabold text-[#2B44D6] mt-2">
+                {property.price}
+              </p>
+              :
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:px-32 gap-10 mt-5">
+                {[
+                  {
+                    icon: <BedDouble />,
+                    label: "Bedrooms",
+                    value: property.beds,
+                  },
+                  {
+                    icon: <Bath />,
+                    label: "Bathrooms",
+                    value: property.bathrooms ?? "—",
+                  },
+                  { icon: <Dice4 />, label: "Area", value: property.area },
+                  {
+                    icon: <Compass />,
+                    label: "Direction",
+                    value: property.direction ?? "—",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-lg border bg-[#F8F8F8] font-bold border-[#E5E5E5] p-4 flex flex-col items-center text-center gap-2"
+                  >
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-full  text-[#4754C5] text-lg">
+                      {item.icon}
+                    </span>
+                    <p className="text-xl font-semibold text-[#2E2E2E]">
+                      {item.value}
+                    </p>
+                    <p className="text-sm text-[#7A7A7A]">{item.label}</p>
+                  </div>
+                ))}
               </div>
-
-              <div className="mt-7">
+              <div className="mt-4 grid grid-cols-2 lg:px-32 sm:grid-cols-3 gap-3">
+                {[
+                  {
+                    icon: <Home className="h-6 w-6" />,
+                    label: "Type",
+                    value: property.propertyType,
+                  },
+                  {
+                    icon: <Ruler className="h-6 w-6" />,
+                    label: "Road Width",
+                    value: property.roadAccess,
+                  },
+                  {
+                    icon: <Calendar className="h-6 w-6" />,
+                    label: "Listed",
+                    value: property.listedDate ?? "—",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-start gap-3 rounded-lg p-3 bg-white"
+                  >
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-md  text-[#4754C5]">
+                      {item.icon}
+                    </span>
+                    <div className="flex flex-col">
+                      <p className="text-xs font-bold text-[#7A7A7A]">
+                        {item.label}
+                      </p>
+                      <p className="font-medium text-[#2E2E2E]">{item.value}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-7 px-8">
                 <h2
                   className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-2`}
                 >
@@ -117,57 +172,81 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
                   {property.description}
                 </p>
               </div>
-
-              <div className="mt-7">
+              <div className="mt-7 px-8">
                 <h2
                   className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-3`}
                 >
                   Amenities
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
                   {property.amenities.map((item) => (
                     <div
                       key={item}
                       className="flex items-center gap-2 text-[#4A4A4A]"
                     >
-                      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#E9EDFF] text-[#4754C5] text-xs">
-                        ✓
+                      <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#81EDDF] text-[#4754C5]">
+                        <CircleCheck className="h-3 w-3" />
                       </span>
                       <span className="text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
+              {/* Leaflet map */}
+            </div>
+            <div className="mt-7  lg:px-8 border border-[#EAEAEA] rounded-lg p-4">
+              <h2
+                className={`${ebGaramond.className}   text-[28px] font-semibold text-[#2E2E2E] mb-8`}
+              >
+                Property Location
+              </h2>
+              {(() => {
+                const coordsMap: Record<string, [number, number]> = {
+                  "Sanepa, Bhaktapur": [27.6686, 85.324],
+                  "Baneshwor, Kathmandu": [27.7126, 85.3242],
+                  "Kapan, Kathmandu": [27.7167, 85.3521],
+                  "Itahari, Sunsari": [26.6667, 87.2667],
+                  "Pulchowk, Lalitpur": [27.6667, 85.3167],
+                  "Dhapasi, Kathmandu": [27.717, 85.35],
+                };
 
-              <div className="mt-7">
-                <h2
-                  className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-3`}
-                >
-                  Property Images
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div className="rounded-md overflow-hidden">
-                    {property.gallery[0] ? (
-                      <img
-                        src={property.gallery[0]}
-                        alt={`${property.title} main`}
-                        className="w-full h-44 md:h-56 object-cover rounded-md"
-                      />
-                    ) : null}
-                  </div>
+                const defaultCenter: [number, number] = [27.709, 85.324];
+                const center = coordsMap[property.location] ?? defaultCenter;
+                const hasCoords = !!coordsMap[property.location];
 
-                  <div className="grid grid-cols-2 gap-3">
-                    {property.gallery.slice(1).map((image, index) => (
-                      <img
-                        key={`${property.id}-${index + 1}`}
-                        src={image}
-                        alt={`${property.title} ${index + 2}`}
-                        className="w-full h-28 md:h-32 object-cover rounded-md"
+                const customIcon = L.divIcon({
+                  className: "",
+                  html: '<div style="width:18px;height:18px;border-radius:50%;background:#4754C5;border:2px solid white;"></div>',
+                  iconSize: [18, 18],
+                  iconAnchor: [9, 9],
+                });
+
+                return (
+                  <div className="w-full lg:px-8 h-64 md:h-96 rounded-md overflow-hidden border border-[#EAEAEA]">
+                    <MapContainer
+                      center={center}
+                      zoom={13}
+                      scrollWheelZoom={false}
+                      className="w-full h-full"
+                    >
+                      <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                       />
-                    ))}
+                      {hasCoords && (
+                        <Marker position={center} icon={customIcon}>
+                          <Popup>
+                            <div className="font-medium">{property.title}</div>
+                            <div className="text-sm text-gray-600">
+                              {property.location}
+                            </div>
+                          </Popup>
+                        </Marker>
+                      )}
+                    </MapContainer>
                   </div>
-                </div>
-              </div>
+                );
+              })()}
             </div>
           </div>
         </div>

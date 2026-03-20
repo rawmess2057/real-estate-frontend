@@ -6,6 +6,9 @@ export type PropertyRecord = Property & {
   description: string;
   amenities: string[];
   gallery: string[];
+  listedDate?: string;
+  bathrooms?: string;
+  direction?: string;
 };
 
 export const propertyList: PropertyRecord[] = [
@@ -15,8 +18,8 @@ export const propertyList: PropertyRecord[] = [
     price: "4.5 Crore",
     title: "Modern Villa With Garden",
     location: "Sanepa, Bhaktapur",
-    beds: "8 Beds",
-    area: "4 Aana",
+    beds: "8 ",
+    area: "4 ",
     roadAccess: "13 ft",
     propertyType: "Villa",
     purpose: "Buy",
@@ -24,6 +27,9 @@ export const propertyList: PropertyRecord[] = [
       "A premium villa with bright interiors, landscaped outdoor space, and quick access to schools, hospitals, and city roads.",
     amenities: ["Parking Space", "Garden Area", "Modular Kitchen", "24/7 Water Supply", "Balcony"],
     gallery: ["/images/building1.jpg", "/images/building1.jpg", "/images/building1.jpg"],
+    listedDate: "2024-06-28",
+    bathrooms: "6 ",
+    direction: "East",
   },
   {
     id: "property-2",
@@ -40,6 +46,9 @@ export const propertyList: PropertyRecord[] = [
       "A centrally located apartment with open city views and easy commute to office hubs, shopping centers, and schools.",
     amenities: ["Lift Access", "Security Guard", "Backup Power", "High-Speed Internet", "Covered Parking"],
     gallery: ["/images/building1.jpg", "/images/building1.jpg", "/images/building1.jpg"],
+    listedDate: "2024-11-10",
+    bathrooms: "2 Baths",
+    direction: "North",
   },
   {
     id: "property-3",
@@ -56,6 +65,9 @@ export const propertyList: PropertyRecord[] = [
       "Comfortable family home in a peaceful neighborhood with convenient access to ring road, local markets, and public transport.",
     amenities: ["Private Parking", "Store Room", "Solar Water", "Terrace", "Nearby School"],
     gallery: ["/images/building1.jpg", "/images/building1.jpg", "/images/building1.jpg"],
+    listedDate: "2025-02-16",
+    bathrooms: "3 Baths",
+    direction: "South",
   },
   {
     id: "property-4",
@@ -72,6 +84,9 @@ export const propertyList: PropertyRecord[] = [
       "Corner land parcel ideal for a residential build with wider road access and strong future value potential.",
     amenities: ["Corner Plot", "Wide Road Frontage", "Electricity Access", "Water Line Nearby", "Clear Ownership"],
     gallery: ["/images/building1.jpg", "/images/building1.jpg", "/images/building1.jpg"],
+    listedDate: "2023-09-02",
+    bathrooms: "0 Baths",
+    direction: "West",
   },
   {
     id: "property-5",
@@ -88,6 +103,9 @@ export const propertyList: PropertyRecord[] = [
       "Well-maintained apartment with modern finishes in a premium neighborhood close to cafes, offices, and transit.",
     amenities: ["Furnished Option", "24/7 Security", "Power Backup", "Water Purifier", "Visitor Parking"],
     gallery: ["/images/building1.jpg", "/images/building1.jpg", "/images/building1.jpg"],
+    listedDate: "2024-08-05",
+    bathrooms: "1 Bath",
+    direction: "North-East",
   },
   {
     id: "property-6",
@@ -104,5 +122,8 @@ export const propertyList: PropertyRecord[] = [
       "Spacious sunlit villa with excellent ventilation, large rooms, and modern utilities designed for comfortable family living.",
     amenities: ["Garden Lawn", "CCTV", "Modular Kitchen", "Solar Panels", "Car Parking"],
     gallery: ["/images/building1.jpg", "/images/building1.jpg", "/images/building1.jpg"],
+    listedDate: "2024-01-21",
+    bathrooms: "4 Baths",
+    direction: "South-East",
   },
 ];
