@@ -127,3 +127,14 @@
     @apply font-sans;
   }
 }
+
+/* Prevent Leaflet map controls/containers from overlapping sticky navbar */
+.leaflet-container {
+  z-index: 0 !important;
+}
+.leaflet-control-container {
+  z-index: 0 !important;
+}
+.leaflet-popup {
+  z-index: 100 !important; /* keep popups above the map but below high z-index navbars */
+}

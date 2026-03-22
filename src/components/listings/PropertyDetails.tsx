@@ -24,7 +24,7 @@ type PropertyDetailsProps = {
 
 function PropertyDetails({ property }: PropertyDetailsProps) {
   return (
-    <main className="pt-4 pb-16 px-4 md:px-10 lg:px-30 bg-whte min-h-screen">
+    <main className="pt-4 pb-16 px-4 md:px-10 lg:px-30 bg-white min-h-screen">
       <div className="mb-6">
         <Link
           href="/properties"
@@ -35,7 +35,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
       </div>
 
       <section className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6 lg:gap-8">
-        <aside className="bg-white border border-[#EAEAEA] rounded-xl p-5 h-fit order-1 lg:order-2 lg:col-start-2 lg:sticky lg:top-24 shadow-sm">
+        <aside className="bg-white border border-[#EAEAEA] rounded-xl p-5 h-fit order-2 lg:order-2 lg:col-start-2 lg:sticky lg:top-24 shadow-sm">
           <h2
             className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-1`}
           >
@@ -72,7 +72,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
           </form>
         </aside>
 
-        <div className="order-2 lg:order-1  lg:col-start-1">
+        <div className="order-1 lg:order-1 lg:col-start-1">
           <div className=" overflow-hidden">
             <img
               src={property.image}
@@ -91,11 +91,13 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
                   {property.location}
                 </p>
               </div>
-              <p className="text-2xl px-8 md:text-3xl EB Garamond font-extrabold text-[#2B44D6] mt-2">
+              <p
+                className={`${ebGaramond.className} text-2xl md:text-3xl font-extrabold text-[#2B44D6] px-8 mt-2`}
+              >
                 {property.price}
               </p>
-              :
-              <div className="grid grid-cols-2 sm:grid-cols-4 lg:px-32 gap-10 mt-5">
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 px-4 md:px-8 lg:px-32 gap-10 mt-5">
                 {[
                   {
                     icon: <BedDouble />,
@@ -128,7 +130,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
                   </div>
                 ))}
               </div>
-              <div className="mt-4 grid grid-cols-2 lg:px-32 sm:grid-cols-3 gap-3">
+              <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 px-4 md:px-8 lg:px-32 gap-3">
                 {[
                   {
                     icon: <Home className="h-6 w-6" />,
@@ -162,7 +164,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
                   </div>
                 ))}
               </div>
-              <div className="mt-7 px-8">
+              <div className="mt-7 px-4 md:px-8">
                 <h2
                   className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-2`}
                 >
@@ -172,7 +174,7 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
                   {property.description}
                 </p>
               </div>
-              <div className="mt-7 px-8">
+              <div className="mt-7 px-4 md:px-8">
                 <h2
                   className={`${ebGaramond.className} text-[28px] font-semibold text-[#2E2E2E] mb-3`}
                 >
@@ -194,11 +196,11 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
               </div>
               {/* Leaflet map */}
             </div>
-            <div className="mt-7  lg:px-8 border border-[#EAEAEA] rounded-lg p-4">
+            <div className="mt-7 px-4 md:px-8 border border-[#EAEAEA] rounded-lg p-4">
               <h2
                 className={`${ebGaramond.className}   text-[28px] font-semibold text-[#2E2E2E] mb-8`}
               >
-                Property Location
+                Location
               </h2>
               {(() => {
                 const coordsMap: Record<string, [number, number]> = {
@@ -222,12 +224,12 @@ function PropertyDetails({ property }: PropertyDetailsProps) {
                 });
 
                 return (
-                  <div className="w-full lg:px-8 h-64 md:h-96 rounded-md overflow-hidden border border-[#EAEAEA]">
+                  <div className="w-full px-0 md:px-0 h-64 md:h-96 rounded-md overflow-hidden border border-[#EAEAEA] relative z-0">
                     <MapContainer
                       center={center}
                       zoom={13}
                       scrollWheelZoom={false}
-                      className="w-full h-full"
+                      className="w-full h-full relative z-0 leaflet-map"
                     >
                       <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
