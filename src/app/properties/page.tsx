@@ -8,7 +8,7 @@ import {
   propertyList,
   type PropertyRecord,
 } from "@/components/listings/propertyData";
-
+import { Search } from "lucide-react";
 export default function PropertiesPage() {
   const [search, setSearch] = useState("");
   const [purpose, setPurpose] = useState<"All" | "Buy" | "Rent">("All");
@@ -82,13 +82,41 @@ export default function PropertiesPage() {
               >
                 Search
               </label>
-              <input
-                id="search"
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search properties..."
-                className="w-full h-10 rounded-md border border-[#D4D4D4] px-3 text-sm outline-none focus:ring-2 focus:ring-[#7171FF]"
-              />
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6D6D6D]" />
+                <input
+                  id="search"
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder="Search properties..."
+                  className="w-full h-10 rounded-md border border-[#D4D4D4] pl-10 pr-10 text-sm outline-none focus:ring-2 focus:ring-[#7171FF]"
+                />
+
+                {search && (
+                  <button
+                    type="button"
+                    onClick={() => setSearch("")}
+                    aria-label="Clear search"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-[#6D6D6D]"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 1L1 13M1 1L13 13"
+                        stroke="#6D6D6D"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                )}
+              </div>
             </div>
 
             <div>
@@ -121,10 +149,23 @@ export default function PropertiesPage() {
                 <button
                   type="button"
                   onClick={() => setShowPropertyTypes((s) => !s)}
-                  className="w-full h-10 rounded-md border border-[#D4D4D4] px-3 text-sm bg-white text-left flex items-center justify-between outline-none focus:ring-2 focus:ring-[#7171FF]"
+                  className="w-full h-10 rounded-md border border-[#D4D4D4] px-3 text-sm bg-white text-left flex items-center justify-between gap-2 outline-none focus:ring-2 focus:ring-[#7171FF]"
                 >
-                  <span className={propertyType === "All" ? "text-[#6D6D6D]" : "text-[#2E2E2E]"}>
-                    {propertyType}
+                  <span className="flex items-center gap-2">
+                    <img
+                      src="images/home.svg"
+                      alt=""
+                      className="w-4 h-4 text-black"
+                    />
+                    <span
+                      className={
+                        propertyType === "All"
+                          ? "text-[#6D6D6D]"
+                          : "text-[#2E2E2E]"
+                      }
+                    >
+                      {propertyType}
+                    </span>
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -134,21 +175,31 @@ export default function PropertiesPage() {
                     stroke="currentColor"
                     className={`w-4 h-4 text-[#6D6D6D] transition-transform duration-200 ${showPropertyTypes ? "rotate-180" : "rotate-0"}`}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </button>
 
                 <div
                   className={`property-dropdown absolute left-0 right-0 mt-1 bg-white border border-[#EAEAEA] rounded-md overflow-hidden shadow-sm z-20 transition-all duration-200 ease-out ${
-                    showPropertyTypes ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
+                    showPropertyTypes
+                      ? "max-h-48 opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
-                  {(["All", "House", "Apartment", "Villa", "Land"] as const).map((opt) => (
+                  {(
+                    ["All", "House", "Apartment", "Villa", "Land"] as const
+                  ).map((opt) => (
                     <button
                       key={opt}
                       type="button"
                       onClick={() => {
-                        setPropertyType(opt as "All" | PropertyRecord["propertyType"]);
+                        setPropertyType(
+                          opt as "All" | PropertyRecord["propertyType"],
+                        );
                         setShowPropertyTypes(false);
                       }}
                       className={`w-full text-left px-3 py-2 text-sm ${propertyType === opt ? "bg-[#7171FF] text-white" : "text-[#4E4E4E]"}`}
@@ -171,10 +222,17 @@ export default function PropertiesPage() {
                 <button
                   type="button"
                   onClick={() => setShowLocations((s) => !s)}
-                  className="w-full h-10 rounded-md border border-[#D4D4D4] px-3 text-sm bg-white text-left flex items-center justify-between outline-none focus:ring-2 focus:ring-[#7171FF]"
+                  className="w-full h-10 rounded-md border border-[#D4D4D4] px-3 text-sm bg-white text-left flex items-center justify-between gap-2 outline-none focus:ring-2 focus:ring-[#7171FF]"
                 >
-                  <span className={location === "All" ? "text-[#6D6D6D]" : "text-[#2E2E2E]"}>
-                    {location}
+                  <span className="flex items-center gap-2">
+                    <img src="images/vector3.svg" alt="" className="w-4 h-4" />
+                    <span
+                      className={
+                        location === "All" ? "text-[#6D6D6D]" : "text-[#2E2E2E]"
+                      }
+                    >
+                      {location}
+                    </span>
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +242,11 @@ export default function PropertiesPage() {
                     stroke="currentColor"
                     className={`w-4 h-4 text-[#6D6D6D] transition-transform duration-200 ${showLocations ? "rotate-180" : "rotate-0"}`}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </button>
 
