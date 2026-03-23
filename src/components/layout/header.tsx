@@ -36,7 +36,7 @@ function Header() {
           <Link href="/properties" className="text-[16px] font-medium">
             Properties
           </Link>
-          <Link href="/#tools" className="text-[16px] font-medium">
+          <Link href="/tools" className="text-[16px] font-medium">
             Tools
           </Link>
           <Link href="/agent" className="text-[16px] font-medium">
