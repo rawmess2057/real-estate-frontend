@@ -10,8 +10,8 @@ function BlogsPage() {
             Blogs & Articles
         </h1>
 
-        <div className='container mx-auto grid grid-cols-4 gap-8 px-2'>
-        <Card className="w-78.5 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
+        <div className='mx-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-8 justify-items-center'>
+        <Card className="w-76 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
           <img
             src="/images/blog1.jpg"
             alt="property"
@@ -46,7 +46,7 @@ function BlogsPage() {
           </CardContent>
         </Card>
 
-        <Card className="w-78.5 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
+        <Card className="w-76 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
           <img
             src="/images/blog1.jpg"
             alt="property"
@@ -81,7 +81,7 @@ function BlogsPage() {
           </CardContent>
         </Card>
 
-        <Card className="w-78.5 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
+        <Card className="w-76 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
           <img
             src="/images/blog1.jpg"
             alt="property"
@@ -116,7 +116,7 @@ function BlogsPage() {
           </CardContent>
         </Card>
 
-        <Card className="w-78.5 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
+        <Card className="w-76 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
           <img
             src="/images/blog1.jpg"
             alt="property"

@@ -23,26 +23,26 @@ function Step1() {
 
       {/* Property Title */}
       <div className='mt-4'>
-        <Label className="block text-[#6F6F6F] text-[16px] font-medium mb-1">
+        <Label className="block text-black text-[16px] font-medium mb-1">
           Property Title <span className="text-red-600">*</span>
         </Label>
 
         <Input
           type="text"
           placeholder="eg.3BHK house in Imadol area"
-          className="bg-[#EDEDED] placeholder:text-[#5D5D5D] placeholder:text-[12px] px-8 py-1 
+          className="bg-[#FCFCFC]placeholder:text-[#5D5D5D] placeholder:text-[12px] px-8 py-1 
                      rounded-lg border border-[#ADADAD]"
         />
       </div>
 
       {/* Property Type */}
       <div className='mt-4'>
-        <Label className="block text-[#6F6F6F] text-[16px] font-medium mb-1">
+        <Label className="block text-black text-[16px] font-medium mb-1">
           Property Type<span className="text-red-600">*</span>
         </Label>
 
         <Select>
-          <SelectTrigger className="w-full  px-8 py-1 rounded-lg bg-[#EDEDED] text-[12px]
+          <SelectTrigger className="w-full  px-8 py-1 rounded-lg bg-[#FCFCFC] text-[12px]
                                      border border-[#ADADAD]">
             <SelectValue placeholder="Select Property Type" 
             className="text-[#5D5D5D]"/>
@@ -58,11 +58,11 @@ function Step1() {
 
         <div className='flex items-center w-full gap-32 mt-4'>
           <div className='w-full'>
-            <Label className="block text-[#6F6F6F] text-[16px] font-medium mb-1">
-               Property Type<span className="text-red-600">*</span>
+            <Label className="block text-black text-[16px] font-medium mb-1">
+               Listing Type<span className="text-red-600">*</span>
             </Label>
             <Select>
-              <SelectTrigger className="w-full border border-[#ADADAD] px-8 py-1 rounded-lg bg-[#EDEDED] text-[12px]">
+              <SelectTrigger className="w-full border border-[#ADADAD] px-8 py-1 rounded-lg bg-[#FCFCFC] text-[12px]">
                <SelectValue placeholder="Select Property Type" 
                   className="text-[#5D5D5D]"/>
                </SelectTrigger>
@@ -77,11 +77,11 @@ function Step1() {
           </div>
 
            <div className='w-full'>
-            <Label className="block text-[#6F6F6F] text-[16px] font-medium mb-1">
-               Property Type<span className="text-red-600">*</span>
+            <Label className="block text-black text-[16px] font-medium mb-1">
+               District<span className="text-red-600">*</span>
             </Label>
             <Select>
-              <SelectTrigger className="w-full border border-[#ADADAD] px-8 py-1 rounded-lg bg-[#EDEDED] text-[12px]">
+              <SelectTrigger className="w-full border border-[#ADADAD] px-8 py-1 rounded-lg bg-[#FCFCFC] text-[12px]">
                <SelectValue placeholder="Select Property Type" 
                   className="text-[#5D5D5D]"/>
                </SelectTrigger>
@@ -98,24 +98,24 @@ function Step1() {
       </div>
 
       <div className='mt-4'>
-        <Label className="block text-[#6F6F6F] text-[16px] font-medium">
+        <Label className="block text-black text-[16px] font-medium">
           Address / Locality<span className="text-red-600">*</span>
         </Label>
 
         <Input
           type="text"
           placeholder="eg.Imadol near Krishna mandir chwok"
-          className="bg-[#EDEDED] placeholder:text-[#5D5D5D] placeholder:text-[12px] 
+          className="bg-[#FCFCFC] placeholder:text-[#5D5D5D] placeholder:text-[12px] 
           px-8 py-1 rounded-lg border border-[#ADADAD]"
         />
       </div>
 
       <div className='mt-4'>
-        <Label className="block text-[#6F6F6F] text-[16px] font-medium mb-1">
+        <Label className="block text-black text-[16px] font-medium mb-1">
           Description
         </Label>
          <textarea
-           className="w-full bg-[#EDEDED] px-8 py-2 rounded-lg placeholder:text-[#5D5D5D] 
+           className="w-full bg-[#FCFCFC] px-8 py-2 rounded-lg placeholder:text-[#5D5D5D] 
            placeholder:text-[12px] resize-none border border-[#ADADAD]"
            rows={4}
            placeholder="Enter property description"

@@ -11,7 +11,7 @@ function FaqPage() {
                 Have any questions? We are here to help you.</p>
         </div>
 
-        <div className='grid grid-cols-2 gap-x-30 gap-y-20'>
+        <div className='grid sm:grid-cols-2 grid-cols-1 gap-x-30 gap-y-20'>
             <div className='flex items-center justify-between border border-[#7171FF] rounded-2xl px-2 py-2'>
                 <p className='text-[16px] font-medium'>
                     How many agents are there in Gharjagga?</p>
