@@ -7,10 +7,10 @@ function LoginPage() {
     <div className="w-full h-screen flex items-center justify-center shadow bg-[#D9D9D9]">
       
       {/* Card */}
-      <div className="w-186 h-106 bg-white rounded-xl flex overflow-hidden shadow-accent-foreground">
+      <div className="w-full max-w-186 h-106 bg-white rounded-xl flex overflow-hidden shadow-accent-foreground md:mx-0 sm:mx-28 mx-8">
         
         {/* Left Image */}
-        <div className="w-1/2 h-full relative">
+        <div className="md:w-1/2 md:block hidden h-full relative">
           <img
             src="/images/login.jpg"
             alt=""
@@ -20,7 +20,7 @@ function LoginPage() {
         </div>
 
         {/* Right Form */}
-        <div className="w-1/2 flex flex-col justify-center">
+        <div className="md:w-1/2 w-full flex flex-col justify-center">
           
           <h1 className={`${ebGaramond.className} text-[24px] font-medium text-center`}>
             Login to your account

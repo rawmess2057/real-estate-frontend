@@ -5,7 +5,7 @@ function ReviewPage() {
   return (
     <div className="bg-[#FAFAFA] pt-22 px-28 ">
 
-      <div className="flex items-center justify-center gap-3">
+      <div className="flex sm:flex-row flex-col items-center justify-center gap-3">
         <img src="/images/google.svg" alt="google logo" />
         <h1 className={`${ebGaramond.className} font-medium text-[32px] text-[#434343]`}>
           Google Reviews

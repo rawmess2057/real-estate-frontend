@@ -33,7 +33,7 @@ function Step3() {
            Amenities
           </Label>
 
-          <div className='grid grid-cols-4 gap-6'>
+          <div className='grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-6'>
 
             <label className="bg-white border border-[#ADADAD] flex items-center gap-6 px-3 py-2 cursor-pointer rounded-md">
               <input

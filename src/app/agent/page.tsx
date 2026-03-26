@@ -4,17 +4,17 @@ import React from 'react'
 function AgentPage() {
   return (
     <div>
-        <div className='h-65.5 bg-[#7171FF] flex flex-col items-center justify-center'>
-            <h1 className={`${ebGaramond.className} font-semibold text-[32px] text-white`}>
+        <div className='h-65.5 bg-[#7171FF] flex flex-col items-center justify-center md:px-28 px-12'>
+            <h1 className={`${ebGaramond.className} font-semibold text-[32px] text-white text-center`}>
                 Meet Our Professional Agents</h1>
-            <p className='text-[#EAEAEA]'>
+            <p className='text-[#EAEAEA] text-center'>
             Our experienced agents are ready to help you buy, sell, or rent 
             properties with confidence.</p>
 
         </div>
 
-        <div className='mx-28 mt-10 grid grid-cols-4 gap-10 mb-28'>
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+        <div className='lg:mx-28 md:mx-16 mx-8 mt-10 grid xl:grid-cols-4 md:grid-cols-3  sm:grid-cols-2 grid-cols-1  gap-10 mb-28 justify-items-center'>
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>
@@ -32,7 +32,7 @@ function AgentPage() {
                 </div>
             </div> 
 
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>
@@ -50,7 +50,7 @@ function AgentPage() {
                 </div>
             </div>
 
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>
@@ -68,7 +68,7 @@ function AgentPage() {
                 </div>
             </div>
 
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>
@@ -86,7 +86,7 @@ function AgentPage() {
                 </div>
             </div>
 
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>
@@ -104,7 +104,7 @@ function AgentPage() {
                 </div>
             </div>
 
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>
@@ -122,7 +122,7 @@ function AgentPage() {
                 </div>
             </div>
 
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>
@@ -140,7 +140,7 @@ function AgentPage() {
                 </div>
             </div>
 
-            <div className="w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
+            <div className="w-full max-w-65 h-68.5 overflow-hidden border border-[#5D5D5DCC] p-2 rounded-lg">
                 <div>
                     <img src="/images/ashal.jpg " alt="" 
                     className='object-cover rounded-lg mb-2'/>

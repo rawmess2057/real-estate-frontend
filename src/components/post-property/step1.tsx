@@ -56,7 +56,7 @@ function Step1() {
           </SelectContent>
         </Select>
 
-        <div className='flex items-center w-full gap-32 mt-4'>
+        <div className='flex md:flex-row flex-col items-center w-full md:gap-x-32 mt-4'>
           <div className='w-full'>
             <Label className="block text-black text-[16px] font-medium mb-1">
                Listing Type<span className="text-red-600">*</span>
@@ -77,7 +77,7 @@ function Step1() {
           </div>
 
            <div className='w-full'>
-            <Label className="block text-black text-[16px] font-medium mb-1">
+            <Label className="block text-black text-[16px] font-medium mb-1 md:mt-0 mt-4">
                District<span className="text-red-600">*</span>
             </Label>
             <Select>

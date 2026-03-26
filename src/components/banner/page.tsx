@@ -44,15 +44,18 @@ function BannerPage() {
         <Card className="w-122 mt-10 max-md:w-full">  
           <CardHeader className="flex items-center justify-between
             max-md:flex-col max-md:gap-3">
-            <Button variant="default" className="px-20 max-md:w-full">Buy</Button>
-            <Button variant="default" className="px-20 max-md:w-full">Rent</Button>
+            <Button variant="default" className="px-20 max-md:w-full text-black hover:text-white bg-[#EAEAEA] hover:bg-[#7171FF]">
+              Buy</Button>
+            <Button variant="default" className="px-20 max-md:w-full text-black hover:text-white bg-[#EAEAEA] hover:bg-[#7171FF]">
+              Rent</Button>
           </CardHeader>
           
           <CardFooter className="flex justify-between gap-2
             max-md:flex-col max-md:gap-3">
             
             <Select>
-              <SelectTrigger className="px-4 w-full">
+              <SelectTrigger className="px-4 bg-[#EAEAEA] hover:bg-[#7171FF] 
+                            data-placeholder:text-black hover:data-placeholder:text-white">
                 <SelectValue placeholder="Property Type" />
               </SelectTrigger>
               <SelectContent>
@@ -62,8 +65,8 @@ function BannerPage() {
               </SelectContent>
             </Select>
 
-            <Button variant="outline" className="px-2 max-md:w-full">Search by location</Button>
-            <Button variant="outline" className="px-2 max-md:w-full">Search</Button>
+            <Button variant="outline" className="md:pl-4 md:pr-12 max-md:w-full bg-[#EAEAEA]">Search by location</Button>
+            <Button variant="outline" className="px-4 max-md:w-full bg-[#7171FF] text-white">Search</Button>
           </CardFooter>
         </Card>
 

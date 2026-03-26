@@ -43,14 +43,15 @@ function Header() {
         {/* Buttons - visible only on MEDIUM and above */}
         <div className="hidden md:flex items-center gap-6">
           <Button
-            className="px-4 py-2 bg-[#7171FF] text-white"
+            className="px-4 py-2 bg-[#7171FF] text-white cursor-pointer"
             onClick={() => router.push("/post-property")}
           >
             Post Property
           </Button>
           <Button
             onClick={() => router.push("/login")}
-            className="px-4 py-2 bg-white text-black border-2 border-[#7171FF]"
+            className="px-4 py-2 bg-white text-black border-2 border-[#7171FF]
+                       hover:bg-[#7171FF] hover:text-white cursor-pointer"
           >
             Login/Signup
           </Button>
