@@ -24,8 +24,8 @@ export default function PostPropertyForm() {
   return (
     <div>
       <div className="w-full h-42 bg-[linear-gradient(90deg,#7171FF_0%,#7171FF_0.01%,#737373_100%)]
-                      flex flex-col items-center justify-center mb-4">
-        <h1 className={`${ebGaramond.className} text-white font-bold text-[32px]`}>
+                      flex flex-col items-center justify-center mb-4 md:px-28 px-12">
+        <h1 className={`${ebGaramond.className} text-white font-bold text-[32px] text-center`}>
           Post Your Property
         </h1>
         <p className="text-[14px] text-white max-w-2xl px-18 text-center mt-2">
@@ -66,7 +66,7 @@ export default function PostPropertyForm() {
         {index !== stepLabels.length - 1 && (
           <div
             className={`
-              w-12 h-0.5 mx-1
+              md:w-12 sm:w-2 w-1 h-0.5 mx-1
               ${index < step ? "bg-[#7171FF]" : "bg-gray-300"}
             `}
           />

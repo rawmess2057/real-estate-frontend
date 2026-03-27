@@ -13,9 +13,16 @@ function AboutPage() {
         />
       </div>
 
-      <div className='h-54 w-180 flex flex-col items-center justify-center mb-20
-                      shadow-[0px_4px_4px_0px_#00000026] absolute bottom-0 px-20
-                      bg-white left-1/2  -translate-x-1/2 translate-y-3/4 rounded-lg'>
+      <div className=' w-full max-w-180
+                       flex flex-col items-center justify-center
+                       px-6 md:px-20
+                       bg-white rounded-lg shadow
+                     
+                       mt-6 py-4 md:mt-0
+                       relative md:absolute
+                     
+                       md:bottom-0 md:left-1/2
+                       md:-translate-x-1/2 md:translate-y-1/4'>
 
         <h1 className={`${ebGaramond.className} text-[32px] font-semibold`}>
           About Us</h1>
@@ -27,14 +34,14 @@ function AboutPage() {
     </div>
 
     <div className='bg-[#FAFAFA] my-36'>
-    <div className='py-12 mx-28'>
+    <div className='md:py-12 md:mx-28 mx-auto'>
       <h1 className={`${ebGaramond.className} text-[32px] text-center font-semibold mb-12`}>
         Our Services</h1>
 
-        <div className='grid grid-cols-3 gap-12'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12 justify-items-center md:justify-items-stretch'>
 
-        <div className='border border-[#D6D6D6] h-63 w-94 flex flex-col items-center
-                        justify-center bg-white px-5 py-2 gap-3 rounded-xl'>
+        <div className='border border-[#D6D6D6] h-auto min-h-65 w-full max-w-96 flex flex-col items-center
+                        justify-center bg-white px-5 py-3 gap-3 rounded-xl'>
           <img src="/images/yoga.svg" alt="" 
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>
@@ -44,8 +51,8 @@ function AboutPage() {
              on various platforms, ensuring maximum exposure to potential buyers or tenants.</p>  
         </div>
 
-        <div className='border border-[#D6D6D6] h-63 w-94 flex flex-col items-center
-                        justify-center bg-white px-5 py-2 gap-3 rounded-xl'>
+        <div className='border border-[#D6D6D6] h-auto min-h-65 w-full max-w-96 flex flex-col items-center
+                        justify-center bg-white px-5 py-3 gap-3 rounded-xl'>
           <img src="/images/yoga.svg" alt="" 
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>
@@ -55,8 +62,8 @@ function AboutPage() {
              on various platforms, ensuring maximum exposure to potential buyers or tenants.</p>  
         </div>
 
-        <div className='border border-[#D6D6D6] h-63 w-94 flex flex-col items-center
-                        justify-center bg-white px-5 py-2 gap-3 rounded-xl'>
+        <div className='border border-[#D6D6D6] h-auto min-h-65 w-full max-w-96 flex flex-col items-center
+                        justify-center bg-white px-5 py-3 gap-3 rounded-xl'>
           <img src="/images/yoga.svg" alt="" 
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>
@@ -66,8 +73,8 @@ function AboutPage() {
              on various platforms, ensuring maximum exposure to potential buyers or tenants.</p>  
         </div>
 
-        <div className='border border-[#D6D6D6] h-63 w-94 flex flex-col items-center
-                        justify-center bg-white px-5 py-2 gap-3 rounded-xl'>
+        <div className='border border-[#D6D6D6] h-auto min-h-65 w-full max-w-96 flex flex-col items-center
+                        justify-center bg-white px-5 py-3 gap-3 rounded-xl'>
           <img src="/images/yoga.svg" alt="" 
                 className='text-center'/>
           <h1 className='{`${ebGaramond.className} text-[24px] text-center font-medium`}'>

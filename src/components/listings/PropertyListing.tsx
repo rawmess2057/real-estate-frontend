@@ -58,8 +58,12 @@ function ListingPage() {
   return (
     <div className="mt-8" id="properties-list">
       <div className="ml-28">
-        <p className="text-[18px] font-medium text-[#7171FF]">Latest Properties</p>
-        <h1 className={`${ebGaramond.className} font-medium text-[32px] text-[#434343] mb-6`}>
+        <p className="text-[18px] font-medium text-[#7171FF]">
+          Latest Properties
+        </p>
+        <h1
+          className={`${ebGaramond.className} font-medium text-[32px] text-[#434343] mb-6`}
+        >
           Discover Our Best Listings
         </h1>
       </div>

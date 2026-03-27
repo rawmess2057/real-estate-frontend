@@ -1,85 +1,24 @@
-import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ebGaramond } from "@/lib/fonts";
 import BlogsPage from "@/components/blogs/page";
-import ListingPage from "@/components/listings/PropertyListing";
 import { AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import FaqPage from "@/components/questions/page";
 import ReviewPage from "@/components/reviews/page";
+import BannerPage from "@/components/banner/page";
+import MobileAppPage from "@/components/mobileApp/page";
+import RentPropertypage from "@/components/rent-property/page";
 
+import { EB_Garamond } from "next/font/google";
+import PropertiesPage from "./properties/page";
 
-
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 export default function Home() {
+  
   return (
-     <main className="m-0 p-0 ">
-      
-      <section>
-      <div className="relative w-full aspect-1440/713">
-        <Image
-          src="/banner.png"
-          alt="Home Banner"
-          fill
-          className="block w-full h-auto"
-        />
-      </div>
-      
-      <div className=" absolute top-40 left-28 w-185">
-        <div className="">
-          <h1 className={`${ebGaramond.className} font-semibold text-[54px] text-white leading-tight tracking-normal md:pr-40`}>
-            Find Your Perfect Home in Nepal
-          </h1>
-          <p className="text-[#D9D9D9] font-medium text-xl pt-4 pr-20 leading-normal">
-            Discover thousands of properties for sale and rent across Nepal.
-            From modern apartments to traditional houses and prime land.
-          </p>
-        </div>
-
-        <Card className="w-122 mt-10">
-          
-          <CardHeader className="flex items-center justify-between">
-            <Button variant="default" className="px-20">Buy</Button>
-            <Button variant="default" className="px-20">Rent</Button>
-          </CardHeader>
-          
-          <CardFooter className="flex justify-between">
-            <Select>
-               <SelectTrigger className="px-4">
-                 <SelectValue placeholder="Property Type" />
-               </SelectTrigger>
-             
-               <SelectContent>
-                 <SelectItem value="house">House</SelectItem>
-                 <SelectItem value="apartment">Apartment</SelectItem>
-                 <SelectItem value="villa">Villa</SelectItem>
-               </SelectContent>
-             </Select>
-            <Button variant="outline" className="px-2">Search by location</Button>
-            <Button variant="outline" className="px-2">Search</Button>
-          </CardFooter>
-        </Card>
-
-        <div className="flex items-center gap-6 mt-12">
-          <div>
-            <h1 className="text-white text-[36px] font-semibold leading-none">10K+</h1>
-            <p className="text-white text-[18px] font-normal">Properties</p>
-          </div>
-          <div>
-            <h1 className="text-white text-[36px] font-semibold leading-none">5K+</h1>
-            <p className="text-white text-[18px] font-normal">Happy Clients</p>
-          </div>
-          <div>
-            <h1 className="text-white text-[36px] font-semibold leading-none">10K+</h1>
-            <p className="text-white text-[18px] font-normal">Districts</p>
-          </div>
-        </div>
-
-      </div>
-
-      </section> 
-
-      <ListingPage/>   
+     <main className="m-0 p-0 ">   
+      <BannerPage/> 
       <ReviewPage/>
       <BlogsPage/>
 
@@ -137,7 +76,7 @@ export default function Home() {
        </div>
      </section>
 
-     <section id="tools" className="bg-[#FAFAFA] py-8 px-18">
+     <section className="bg-[#FAFAFA] py-8 px-18">
       <div className=" grid grid-cols-2">
         <div>
         <h1 className={`${ebGaramond.className} font-semibold text-[24px] pr-40`}>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ebGaramond } from "@/lib/fonts";
 import { Button } from "@/components/ui/button";
 import { type PropertyRecord } from "./propertyData";
-import {  ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 
 const PropertyMap = dynamic(() => import("./PropertyMap"), { ssr: false });
 
