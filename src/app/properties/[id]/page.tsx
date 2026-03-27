@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import PropertyDetails from "@/components/listings/PropertyDetails";
-import { propertyList } from "@/components/listings/propertyData";
+import PropertyDetails from "@/components/property/PropertyDetails";
+import { propertyList } from "@/components/property/propertyData";
 
 type PropertyDetailsPageProps = {
   params: Promise<{

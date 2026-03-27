@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 import { Anton } from "next/font/google";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const anton = Anton({
@@ -33,15 +32,15 @@ function Header() {
           </span>
         </Link>
 
-        {/* Nav - evenly spaced */}
-        <nav className="flex-1 flex justify-evenly ml-20">
+        {/* Nav - hidden on small, evenly spaced on large screens */}
+        <nav className="hidden lg:flex flex-1 justify-evenly ml-20">
           <Link href="/" className="text-[16px] font-medium">
             Home
           </Link>
-          <Link href="/" className="text-[16px] font-medium">
+          <Link href="/properties" className="text-[16px] font-medium">
             Properties
           </Link>
-          <Link href="/" className="text-[16px] font-medium">
+          <Link href="/tools" className="text-[16px] font-medium">
             Tools
           </Link>
           <Link href="/agent" className="text-[16px] font-medium">
@@ -69,41 +68,58 @@ function Header() {
           </Button>
         </div>
 
-        {/* Hamburger - hidden on LARGE */}
+        {/* Hamburger - visible on small screens with animated transform */}
         <div className="lg:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          <button
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+            className="relative w-8 h-8 flex items-center justify-center"
+          >
+            <span
+              className={`block absolute h-0.5 w-6 bg-black transform transition duration-300 ${
+                isOpen ? "rotate-45" : "-translate-y-1"
+              }`}
+            />
+            <span
+              className={`block absolute h-0.5 w-6 bg-black transform transition duration-300 ${
+                isOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`block absolute h-0.5 w-6 bg-black transform transition duration-300 ${
+                isOpen ? "-rotate-45" : "translate-y-1"
+              }`}
+            />
           </button>
         </div>
       </div>
 
       {/* Mobile + Medium Menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-white border-t px-6 py-4 flex flex-col gap-4">
-          <Link href="/">Home</Link>
-          <Link href="/">Properties</Link>
-          <Link href="/">Tools</Link>
-          <Link href="/agent">Agents</Link>
-          <Link href="/about">About Us</Link>
+      <div
+        className={`lg:hidden bg-white border-t px-6 overflow-hidden transition-all duration-300 ${
+          isOpen
+            ? "max-h-96 py-4 opacity-100 pointer-events-auto"
+            : "max-h-0 py-0 opacity-0 pointer-events-none"
+        } flex flex-col gap-4`}
+      >
+        <Link href="/">Home</Link>
+        <Link href="/properties">Properties</Link>
+        <Link href="/">Tools</Link>
+        <Link href="/agent">Agents</Link>
+        <Link href="/about">About Us</Link>
 
-          {/* Buttons only for SMALL */}
-          <div className="flex flex-col gap-3 md:hidden">
-            <Button
-              className="bg-[#7171FF] text-white"
-              onClick={() => router.push("/post-property")}
-            >
-              Post Property
-            </Button>
+        {/* Buttons only for SMALL */}
+        <div className="flex flex-col gap-3 md:hidden">
+          <Button className="bg-[#7171FF] text-white" onClick={() => router.push("/post-property")}>
+            Post Property
+          </Button>
 
-            <Button
-              onClick={() => router.push("/login")}
-              className="bg-white text-black border-2 border-[#7171FF]"
-            >
-              Login/Signup
-            </Button>
-          </div>
+          <Button onClick={() => router.push("/login")} className="bg-white text-black border-2 border-[#7171FF]">
+            Login/Signup
+          </Button>
         </div>
-      )}
+      </div>
     </header>
   );
 }

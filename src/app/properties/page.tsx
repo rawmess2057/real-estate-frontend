@@ -2,12 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { ebGaramond } from "@/lib/fonts";
-import PropertyCard from "@/components/listings/PropertyCard";
+import PropertyCard from "@/components/property/PropertyCard";
 import { Button } from "@/components/ui/button";
 import {
   propertyList,
   type PropertyRecord,
-} from "@/components/listings/propertyData";
+} from "@/components/property/propertyData";
 import { Search } from "lucide-react";
 export default function PropertiesPage() {
   const [search, setSearch] = useState("");
