@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 import { Anton } from "next/font/google";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const anton = Anton({
   weight: "400",
@@ -15,6 +16,7 @@ const anton = Anton({
 function Header() {
   const pathName = usePathname();
   const router = useRouter();
+  const isLoginPage: boolean = pathName === "/login";
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,13 +33,23 @@ function Header() {
           </span>
         </Link>
 
-        {/* Nav - only LARGE and above */}
-        <nav className="hidden lg:flex flex-1 justify-evenly">
-          <Link href="/" className="text-[16px] font-medium">Home</Link>
-          <Link href="/" className="text-[16px] font-medium">Properties</Link>
-          <Link href="/" className="text-[16px] font-medium">Tools</Link>
-          <Link href="/agent" className="text-[16px] font-medium">Agents</Link>
-          <Link href="/about" className="text-[16px] font-medium">About Us</Link>
+        {/* Nav - evenly spaced */}
+        <nav className="flex-1 flex justify-evenly ml-20">
+          <Link href="/" className="text-[16px] font-medium">
+            Home
+          </Link>
+          <Link href="/" className="text-[16px] font-medium">
+            Properties
+          </Link>
+          <Link href="/" className="text-[16px] font-medium">
+            Tools
+          </Link>
+          <Link href="/agent" className="text-[16px] font-medium">
+            Agents
+          </Link>
+          <Link href="/about" className="text-[16px] font-medium">
+            About Us
+          </Link>
         </nav>
 
         {/* Buttons - visible only on MEDIUM and above */}
