@@ -71,12 +71,12 @@ export default function ToolsPage() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-8 mt-8 grid grid-cols-1 gap-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 mt-8 grid grid-cols-1 gap-8">
           <article className="p-6  rounded-lg">
             <h2 className="text-2xl font-semibold mb-1">Ropani System</h2>
 
             <div className="flex flex-col gap-3">
-              <div className="flex gap-3 items-end">
+              <div className="flex flex-col md:flex-row gap-3 items-end">
                 <div className="flex-1">
                   <label className="block text-sm font-medium mb-1">
                     Ropani
@@ -191,11 +191,11 @@ export default function ToolsPage() {
                 </div>
               </div>
 
-              <div className="flex gap-3 items-end">
+              <h2 className="text-2xl font-semibold mb-1">Feet/Meter</h2>
+              <div className="flex flex-col md:flex-row gap-3 items-end">
                 <div className="flex-1">
-                  <h2 className="text-2xl font-semibold mb-1">Bigha System</h2>
                   <label className="block text-sm font-medium mb-1">
-                    Square Feet
+                    Sq. Feet
                   </label>
                   <input
                     type="number"
@@ -211,7 +211,7 @@ export default function ToolsPage() {
                 </div>
                 <div className="flex-1">
                   <label className="block text-sm font-medium mb-1">
-                    Square Meters
+                    Sq. Meters
                   </label>
                   <input
                     type="number"
@@ -282,7 +282,7 @@ export default function ToolsPage() {
         </div>
 
         <div className="w-full bg-[#F0F0FD] py-8 mt-6 mb-24">
-          <div className="max-w-7xl mx-auto px-8">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
             <aside className="p-6 rounded-lg ">
               <h3 className="text-xl font-semibold mb-3">
                 Area Converter Information
