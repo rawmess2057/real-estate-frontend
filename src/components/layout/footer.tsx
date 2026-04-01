@@ -14,15 +14,15 @@ function Footer() {
                     properties. Find your dream home with us.</p>
 
                 <div className='flex items-center gap-3 mt-5 md:justify-start justify-center'>
-                    <div className='h-8 w-8 rounded-full flex items-center justify-center  border border-[#448DEC] relative'>
-                        <img src="/images/fb.svg" alt="" className='absolute'/>
+                    <div className='h-8 w-8 rounded-full flex items-center justify-center border border-[#448DEC]'>
+                        <img src="/images/fb.svg" alt="facebook" className='w-4 h-4 object-contain'/>
                     </div>
-                    <div className='h-8 w-8 rounded-full flex items-center justify-center  border border-[#448DEC] relative'>
-                        <img src="/images/insta.svg" alt="" className='absolute'/>
+                    <div className='h-8 w-8 rounded-full flex items-center justify-center border border-[#448DEC]'>
+                        <img src="/images/insta.svg" alt="instagram" className='w-4 h-4 object-contain'/>
                     </div>
-                    <div className='h-8 w-8 rounded-full flex items-center justify-center  border border-[#448DEC] relative'>
-                        <img src="/images/twitter.svg" alt="" className='absolute'/>
-                    </div>                  
+                    <div className='h-8 w-8 rounded-full flex items-center justify-center border border-[#448DEC]'>
+                        <img src="/images/twitter.svg" alt="twitter" className='w-4 h-4 object-contain'/>
+                    </div>
                 </div>
             </div>
 
@@ -51,25 +51,25 @@ function Footer() {
             <div className='flex flex-col md:text-start text-center '>
                 <p className={`${ebGaramond.className} font-semibold text-[22px] text-white`}>
                     Contact Us</p>
-                <div className='flex flex-col gap-y-2'>    
-                <div className='flex items-center justify-center gap-2'>
-                    <img src="/images/location.svg" alt="" />
+                <div className='flex flex-col gap-y-2 md:items-start items-center'>    
+                <div className='flex items-center gap-2'>
+                    <img src="/images/location.svg" alt="location" className='w-6 h-6 object-contain'/>
                     <div>
                         <p className='text-white font-light'>Address</p>
                         <p className='text-[#EAEAEA] text-[12px]'>
                             Lazimpat, Kathmandu</p>
                     </div>
                 </div>    
-                <div className='flex items-center justify-center gap-2'>
-                    <img src="/images/email.svg" alt="" />
+                <div className='flex items-center gap-2'>
+                    <img src="/images/email.svg" alt="email" className='w-6 h-6 object-contain'/>
                     <div>
                         <p className='text-white font-light'>Email</p>
                         <p className='text-[#EAEAEA] text-[12px]'>
                             gharjagga@gmail.com</p>
                     </div>
                 </div>    
-                <div className='flex items-center justify-center gap-2'>
-                    <img src="/images/phone.svg" alt="" />
+                <div className='flex items-center gap-2'>
+                    <img src="/images/phone.svg" alt="phone" className='w-6 h-6 object-contain'/>
                     <div>
                         <p className='text-white font-light '>Contact</p>
                         <p className='text-[#EAEAEA] text-[12px]'>
