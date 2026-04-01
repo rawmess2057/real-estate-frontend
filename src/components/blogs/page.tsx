@@ -10,7 +10,7 @@ function BlogsPage() {
             Blogs & Articles
         </h1>
 
-        <div className='mx-12 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-8 justify-items-center'>
+        <div className='mx-auto max-w-7xl grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 jus  gap-8 justify-items-center'>
         <Card className="w-76 h-104 px-2 py-2 shadow-[0px_4px_5px_0px_#0000001F]">
           <img
             src="/images/blog1.jpg"
