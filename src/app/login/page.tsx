@@ -40,8 +40,9 @@ function LoginPage() {
             <div>
               <div className="flex items-center justify-between">
               <label className="block text-[#6F6F6F] text-[16px] font-medium">Password</label>
-              <p className="text-[12px] font-medium text-[#3939FF]">
-                Forget Password?</p>
+              <Link href="/verify" className="text-[12px] font-medium text-[#3939FF]">
+                Forget Password?
+              </Link>
               </div>
               <input
                 type="password"
